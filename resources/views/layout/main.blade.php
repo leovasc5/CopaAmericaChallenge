@@ -10,56 +10,40 @@
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/topBar.css">
         {{-- <link href="/img/cretch.ico" type="image/x-icon" rel="icon"/> --}}
-        <title>@yield('title')</title>
+        <title>Copa America Challenge</title>
     </head>
     <body>
-    @yield('topBar')
-    <div class="mobile-container">
-
-    <div class="topnav">
-      <a href="http://127.0.0.1:8000" class="active">
-      <img src='/img/cretch.png' width='22px'/> Cretch</a>
-      <div id="myLinks">
-      <a href="http://127.0.0.1:8000/">Página Inicial</a>
-        <a href="http://127.0.0.1:8000/criar-partida">Criar Partida</a>
-        @auth 
-        <a href="http://127.0.0.1:8000/dashboard">Minhas Partidas</a>
-        <form action="/logout" method="POST">
-          @csrf
-          <a href="/logout" onclick="event.preventDefault();
-                            this.closest('form').submit();">Sair</a>
-        </form>
-        @endauth
-        @guest
-        <a href="http://127.0.0.1:8000/login">Login</a>
-        <a href="http://127.0.0.1:8000/register">Cadastrar</a>
-        @endguest
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="topBar()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    @yield('content')
-
-    @yield('footer')
-    <div class="footer-basic">
-        <footer>
-            <div class="social">
-                <a href="https://github.com/leovasc5/"><i class="icon ion-social-github"></i></a>
-                <a href="https://www.linkedin.com/in/leonardo-vasconcelos-paulino-7a0b41200/"><i class="icon ion-social-linkedin"></i></a>
-                <a href="https://www.twitter.com/leovasc5/"><i class="icon ion-social-twitter"></i></a>
-                <a href="https://www.instagram.com/leovasc5/"><i class="icon ion-social-instagram"></i></a>
-            </div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="mailto: leovasc5@hotmail.com">E-mail</a></li>
-            </ul>
-            <p class="copyright">Leonardo Vasconcelos Paulino - 2021</p>
-        </footer>
-    </div>
-
-    <script src="/js/topBar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
+    <div class="container">
+        <h1>
+           <a href="#menu" value='Clique aqui!'>Copa America Challenge</a>
+        </h1>
+           
+       <div class="popover" id="menu">
+        <div class = 'content'>
+         <a href="#" class="close"></a>
+          <div class = 'nav'>
+           <ul class = 'nav_list'>
+             
+             <div class = 'nav_list_item'>
+             <li><a href="#">Home</a></li>
+             </div>
+            <div class = 'nav_list_item'>
+               <li><a href="#">About</a></li>
+             </div>
+           <div class = 'nav_list_item'>
+             <li><a href="#">Products</a></li>
+             </div>
+           <div class = 'nav_list_item'>
+             <li><a href="#">Services</a></li>
+             </div>
+            <div class = 'nav_list_item'>
+               <li><a href="#">Contact</a></li>
+             </div>
+             
+           </ul>
+         </div>
+        </div>
+        </div>
+        </div>
     </body>
 </html>

@@ -15,7 +15,7 @@
     <div class="container">
         <h1>
             <center>
-            <img src="img/copa_america_logo.png" style="max-width: 200px;"/>
+            <img src="img/copa_america_logo.png" onclick="location.href='#menu'" style="max-width: 200px; cursor:pointer;"/>
             </center>
             <br>
            <a href="#menu" value='Clique aqui!'>Copa America Challenge</a>
@@ -28,7 +28,7 @@
            <ul class = 'nav_list'>
              
              <div class = 'nav_list_item'>
-             <li><a href="#">Home</a></li>
+             <li><a href="/home">Home</a></li>
              </div>
             <div class = 'nav_list_item'>
                <li><a href="#">Login</a></li>

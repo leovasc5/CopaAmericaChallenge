@@ -20,7 +20,11 @@
       <a id="logo"><img src="/img/copa_america_logo.png" style="max-width:40px;"/></a>
       <a class="active">Home</a>
       <a href="#news">Jogar</a>
-      <a href="#contact">Sair</a>
+      <form action="/logout" method="POST">
+        @csrf
+        <a href="/logout" onclick="event.preventDefault();
+                          this.closest('form').submit();">Sair</a>
+      </form>
       <a id="text">COPA AMERICA CHALLENGE</a>
     </div>
 

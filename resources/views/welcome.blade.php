@@ -28,13 +28,13 @@
            <ul class = 'nav_list'>
              
              <div class = 'nav_list_item'>
-             <li><a href="/dashboard">Jogar</a></li>
+             <li><a href="/convidado">Jogar (Convidado)</a></li>
              </div>
             <div class = 'nav_list_item'>
-               <li><a href="#">Login</a></li>
+               <li><a href="/login">Login</a></li>
              </div>
            <div class = 'nav_list_item'>
-             <li><a href="#">Cadastrar-se</a></li>
+             <li><a href="/register">Cadastrar-se</a></li>
            </div>
            </ul>
          </div>

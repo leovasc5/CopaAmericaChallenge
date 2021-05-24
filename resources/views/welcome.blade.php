@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Signika:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/welcome.css">
-        {{-- <link href="/img/cretch.ico" type="image/x-icon" rel="icon"/> --}}
+        <link href="/img/copa_america_ico.ico" type="image/x-icon" rel="icon"/>
         <title>Copa America Challenge</title>
     </head>
     <body>
@@ -28,7 +28,7 @@
            <ul class = 'nav_list'>
              
              <div class = 'nav_list_item'>
-             <li><a href="/home">Home</a></li>
+             <li><a href="/dashboard">Dashboard</a></li>
              </div>
             <div class = 'nav_list_item'>
                <li><a href="#">Login</a></li>

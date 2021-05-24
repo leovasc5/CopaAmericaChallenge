@@ -28,7 +28,7 @@
            <ul class = 'nav_list'>
              
              <div class = 'nav_list_item'>
-             <li><a href="/convidado">Jogar (Convidado)</a></li>
+             <li><a href="/convidado/grupos">Jogar (Convidado)</a></li>
              </div>
             <div class = 'nav_list_item'>
                <li><a href="/login">Login</a></li>

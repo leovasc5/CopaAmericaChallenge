@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CACController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,10 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 })->middleware('auth');
+
+Route::get('convidado/grupos', function () {
+    return view('/convidado/grupos');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

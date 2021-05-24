@@ -17,7 +17,8 @@
 
     @yield('topBar')
     <div class="topnav">
-      <a id="logo"><img src="/img/copa_america_logo.png" style="max-width:40px;"/></a>
+      <a id="logo"><img src="/img/copa_america_logo.png" style="max-width:54px;"/></a>
+      @auth
       <a class="active">Home</a>
       <a href="#news">Jogar</a>
       <form action="/logout" method="POST">
@@ -25,6 +26,12 @@
         <a href="/logout" onclick="event.preventDefault();
                           this.closest('form').submit();">Sair</a>
       </form>
+      @endauth
+      @guest
+      <a href='/login'>Entrar</a>
+      <a href='/register'>Cadastrar-se</a>
+      <a href='/'>Sair</a>
+      @endguest
       <a id="text">COPA AMERICA CHALLENGE</a>
     </div>
 

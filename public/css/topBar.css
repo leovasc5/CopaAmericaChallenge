@@ -1,6 +1,7 @@
 .topnav {
   overflow: hidden;
   background-color: #013184;
+  /* height: 64px; */
 }
 
 .topnav a {
@@ -9,7 +10,8 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
+  height: 32px;
 }
 
 #logo{

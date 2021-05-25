@@ -1,10 +1,8 @@
 .container{
     border-radius: 16px;
-    height:400px;
-    width:500px;
+    height:550px;
+    width:300px;
     border: 1px solid #f2f2f2;
-    /* display: inline-block; */
-    /* margin-top: 32px; */
     margin: 16px;
 }
 
@@ -35,14 +33,17 @@
     text-align: center;
 }
 
-.times label{
-    margin-top: 100px;
-}
-
 .times img{
     border-radius: 14px;
+    margin-top: 5px;
 }
 
 td{
     padding: 10px 5px;
+    border-top: 1px solid #08AEEA;
+    width: 500px;
+}
+
+#first{
+    border-top: none;
 }

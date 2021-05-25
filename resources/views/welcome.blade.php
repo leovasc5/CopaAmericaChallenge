@@ -21,7 +21,7 @@
             <img src="img/copa_america_logo.png" onclick="location.href='#menu'; playAudio()" style="max-width: 200px; cursor:pointer;"/>
             </center>
             <br>
-           <a href="#menu" value='Clique aqui!'> Copa America Challenge</a>
+           <a href="#menu"  onclick="playAudio()"> Copa America Challenge</a>
         </h1>
            
        <div class="popover" id="menu">

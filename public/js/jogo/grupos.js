@@ -6,6 +6,12 @@ var ga_terceiro;
 var ga_quarto;
 var ga_quinto;
 
+var ar_selected = false;
+var bo_selected = false;
+var ch_selected = false;
+var pa_selected = false;
+var ur_selected = false;
+
 function atualizaGA(excecao, posicao){
     posicao == '1' ? controllerPosition1GA(excecao): null;
     posicao == '2' ? controllerPosition2GA(excecao): null;
@@ -15,189 +21,73 @@ function atualizaGA(excecao, posicao){
 }
 
 function controllerPosition1GA(excecao){
-    
-    if(excecao == 'argentina'){
-        document.getElementById('slct_bo').options[1].disabled = "disabled";
-        document.getElementById('slct_ch').options[1].disabled = "disabled";
-        document.getElementById('slct_pa').options[1].disabled = "disabled";
-        document.getElementById('slct_ur').options[1].disabled = "disabled";
-    }
+    document.getElementById('slct_ar').options[1].disabled = "disabled";
+    document.getElementById('slct_bo').options[1].disabled = "disabled";
+    document.getElementById('slct_ch').options[1].disabled = "disabled";
+    document.getElementById('slct_pa').options[1].disabled = "disabled";
+    document.getElementById('slct_ur').options[1].disabled = "disabled";
 
-    if(excecao == 'bolivia'){
-        document.getElementById('slct_ar').options[1].disabled = "disabled";
-        document.getElementById('slct_ch').options[1].disabled = "disabled";
-        document.getElementById('slct_pa').options[1].disabled = "disabled";
-        document.getElementById('slct_ur').options[1].disabled = "disabled";
-    }
-
-    if(excecao == 'chile'){
-        document.getElementById('slct_ar').options[1].disabled = "disabled";
-        document.getElementById('slct_bo').options[1].disabled = "disabled";
-        document.getElementById('slct_pa').options[1].disabled = "disabled";
-        document.getElementById('slct_ur').options[1].disabled = "disabled";
-    }
-
-    if(excecao == 'paraguai'){
-        document.getElementById('slct_ar').options[1].disabled = "disabled";
-        document.getElementById('slct_bo').options[1].disabled = "disabled";
-        document.getElementById('slct_ch').options[1].disabled = "disabled";
-        document.getElementById('slct_ur').options[1].disabled = "disabled";
-    }
-
-    if(excecao == 'uruguai'){
-        document.getElementById('slct_ar').options[1].disabled = "disabled";
-        document.getElementById('slct_bo').options[1].disabled = "disabled";
-        document.getElementById('slct_ch').options[1].disabled = "disabled";
-        document.getElementById('slct_pa').options[1].disabled = "disabled";
-    }
+    excecao == 'argentina' ? document.getElementById('slct_ar').options[1].disabled = false: null;
+    excecao == 'bolivia' ? document.getElementById('slct_bo').options[1].disabled = false: null;
+    excecao == 'chile' ? document.getElementById('slct_ch').options[1].disabled = false: null;
+    excecao == 'paraguai' ? document.getElementById('slct_pa').options[1].disabled = false: null;
+    excecao == 'uruguai' ? document.getElementById('slct_ur').options[1].disabled = false: null;
 }
 
 function controllerPosition2GA(excecao){
-    if(excecao == 'argentina'){
-        document.getElementById('slct_bo').options[2].disabled = "disabled";
-        document.getElementById('slct_ch').options[2].disabled = "disabled";
-        document.getElementById('slct_pa').options[2].disabled = "disabled";
-        document.getElementById('slct_ur').options[2].disabled = "disabled";
-    }
+    document.getElementById('slct_ar').options[2].disabled = "disabled";
+    document.getElementById('slct_bo').options[2].disabled = "disabled";
+    document.getElementById('slct_ch').options[2].disabled = "disabled";
+    document.getElementById('slct_pa').options[2].disabled = "disabled";
+    document.getElementById('slct_ur').options[2].disabled = "disabled";
 
-    if(excecao == 'bolivia'){
-        document.getElementById('slct_ar').options[2].disabled = "disabled";
-        document.getElementById('slct_ch').options[2].disabled = "disabled";
-        document.getElementById('slct_pa').options[2].disabled = "disabled";
-        document.getElementById('slct_ur').options[2].disabled = "disabled";
-    }
-
-    if(excecao == 'chile'){
-        document.getElementById('slct_ar').options[2].disabled = "disabled";
-        document.getElementById('slct_bo').options[2].disabled = "disabled";
-        document.getElementById('slct_pa').options[2].disabled = "disabled";
-        document.getElementById('slct_ur').options[2].disabled = "disabled";
-    }
-
-    if(excecao == 'paraguai'){
-        document.getElementById('slct_ar').options[2].disabled = "disabled";
-        document.getElementById('slct_bo').options[2].disabled = "disabled";
-        document.getElementById('slct_ch').options[2].disabled = "disabled";
-        document.getElementById('slct_ur').options[2].disabled = "disabled";
-    }
-
-    if(excecao == 'uruguai'){
-        document.getElementById('slct_ar').options[2].disabled = "disabled";
-        document.getElementById('slct_bo').options[2].disabled = "disabled";
-        document.getElementById('slct_ch').options[2].disabled = "disabled";
-        document.getElementById('slct_pa').options[2].disabled = "disabled";
-    }
+    excecao == 'argentina' ? document.getElementById('slct_ar').options[2].disabled = false: null;
+    excecao == 'bolivia' ? document.getElementById('slct_bo').options[2].disabled = false: null;
+    excecao == 'chile' ? document.getElementById('slct_ch').options[2].disabled = false: null;
+    excecao == 'paraguai' ? document.getElementById('slct_pa').options[2].disabled = false: null;
+    excecao == 'uruguai' ? document.getElementById('slct_ur').options[2].disabled = false: null;
 }
 
 function controllerPosition3GA(excecao){
-    if(excecao == 'argentina'){
-        document.getElementById('slct_bo').options[3].disabled = "disabled";
-        document.getElementById('slct_ch').options[3].disabled = "disabled";
-        document.getElementById('slct_pa').options[3].disabled = "disabled";
-        document.getElementById('slct_ur').options[3].disabled = "disabled";
-    }
+    document.getElementById('slct_ar').options[3].disabled = "disabled";
+    document.getElementById('slct_bo').options[3].disabled = "disabled";
+    document.getElementById('slct_ch').options[3].disabled = "disabled";
+    document.getElementById('slct_pa').options[3].disabled = "disabled";
+    document.getElementById('slct_ur').options[3].disabled = "disabled";
 
-    if(excecao == 'bolivia'){
-        document.getElementById('slct_ar').options[3].disabled = "disabled";
-        document.getElementById('slct_ch').options[3].disabled = "disabled";
-        document.getElementById('slct_pa').options[3].disabled = "disabled";
-        document.getElementById('slct_ur').options[3].disabled = "disabled";
-    }
-
-    if(excecao == 'chile'){
-        document.getElementById('slct_ar').options[3].disabled = "disabled";
-        document.getElementById('slct_bo').options[3].disabled = "disabled";
-        document.getElementById('slct_pa').options[3].disabled = "disabled";
-        document.getElementById('slct_ur').options[3].disabled = "disabled";
-    }
-
-    if(excecao == 'paraguai'){
-        document.getElementById('slct_ar').options[3].disabled = "disabled";
-        document.getElementById('slct_bo').options[3].disabled = "disabled";
-        document.getElementById('slct_ch').options[3].disabled = "disabled";
-        document.getElementById('slct_ur').options[3].disabled = "disabled";
-    }
-
-    if(excecao == 'uruguai'){
-        document.getElementById('slct_ar').options[3].disabled = "disabled";
-        document.getElementById('slct_bo').options[3].disabled = "disabled";
-        document.getElementById('slct_ch').options[3].disabled = "disabled";
-        document.getElementById('slct_pa').options[3].disabled = "disabled";
-    }
+    excecao == 'argentina' ? document.getElementById('slct_ar').options[3].disabled = false: null;
+    excecao == 'bolivia' ? document.getElementById('slct_bo').options[3].disabled = false: null;
+    excecao == 'chile' ? document.getElementById('slct_ch').options[3].disabled = false: null;
+    excecao == 'paraguai' ? document.getElementById('slct_pa').options[3].disabled = false: null;
+    excecao == 'uruguai' ? document.getElementById('slct_ur').options[3].disabled = false: null;
 }
 
 function controllerPosition4GA(excecao){
-    if(excecao == 'argentina'){
-        document.getElementById('slct_bo').options[4].disabled = "disabled";
-        document.getElementById('slct_ch').options[4].disabled = "disabled";
-        document.getElementById('slct_pa').options[4].disabled = "disabled";
-        document.getElementById('slct_ur').options[4].disabled = "disabled";
-    }
+    document.getElementById('slct_ar').options[4].disabled = "disabled";
+    document.getElementById('slct_bo').options[4].disabled = "disabled";
+    document.getElementById('slct_ch').options[4].disabled = "disabled";
+    document.getElementById('slct_pa').options[4].disabled = "disabled";
+    document.getElementById('slct_ur').options[4].disabled = "disabled";
 
-    if(excecao == 'bolivia'){
-        document.getElementById('slct_ar').options[4].disabled = "disabled";
-        document.getElementById('slct_ch').options[4].disabled = "disabled";
-        document.getElementById('slct_pa').options[4].disabled = "disabled";
-        document.getElementById('slct_ur').options[4].disabled = "disabled";
-    }
-
-    if(excecao == 'chile'){
-        document.getElementById('slct_ar').options[4].disabled = "disabled";
-        document.getElementById('slct_bo').options[4].disabled = "disabled";
-        document.getElementById('slct_pa').options[4].disabled = "disabled";
-        document.getElementById('slct_ur').options[4].disabled = "disabled";
-    }
-
-    if(excecao == 'paraguai'){
-        document.getElementById('slct_ar').options[4].disabled = "disabled";
-        document.getElementById('slct_bo').options[4].disabled = "disabled";
-        document.getElementById('slct_ch').options[4].disabled = "disabled";
-        document.getElementById('slct_ur').options[4].disabled = "disabled";
-    }
-
-    if(excecao == 'uruguai'){
-        document.getElementById('slct_ar').options[4].disabled = "disabled";
-        document.getElementById('slct_bo').options[4].disabled = "disabled";
-        document.getElementById('slct_ch').options[4].disabled = "disabled";
-        document.getElementById('slct_pa').options[4].disabled = "disabled";
-    }
+    excecao == 'argentina' ? document.getElementById('slct_ar').options[4].disabled = false: null;
+    excecao == 'bolivia' ? document.getElementById('slct_bo').options[4].disabled = false: null;
+    excecao == 'chile' ? document.getElementById('slct_ch').options[4].disabled = false: null;
+    excecao == 'paraguai' ? document.getElementById('slct_pa').options[4].disabled = false: null;
+    excecao == 'uruguai' ? document.getElementById('slct_ur').options[4].disabled = false: null;
 }
     
 function controllerPosition5GA(excecao){
-    if(excecao == 'argentina'){
-        document.getElementById('slct_bo').options[5].disabled = "disabled";
-        document.getElementById('slct_ch').options[5].disabled = "disabled";
-        document.getElementById('slct_pa').options[5].disabled = "disabled";
-        document.getElementById('slct_ur').options[5].disabled = "disabled";
-    }
+    document.getElementById('slct_ar').options[5].disabled = "disabled";
+    document.getElementById('slct_bo').options[5].disabled = "disabled";
+    document.getElementById('slct_ch').options[5].disabled = "disabled";
+    document.getElementById('slct_pa').options[5].disabled = "disabled";
+    document.getElementById('slct_ur').options[5].disabled = "disabled";
 
-    if(excecao == 'bolivia'){
-        document.getElementById('slct_ar').options[5].disabled = "disabled";
-        document.getElementById('slct_ch').options[5].disabled = "disabled";
-        document.getElementById('slct_pa').options[5].disabled = "disabled";
-        document.getElementById('slct_ur').options[5].disabled = "disabled";
-    }
-
-    if(excecao == 'chile'){
-        document.getElementById('slct_ar').options[5].disabled = "disabled";
-        document.getElementById('slct_bo').options[5].disabled = "disabled";
-        document.getElementById('slct_pa').options[5].disabled = "disabled";
-        document.getElementById('slct_ur').options[5].disabled = "disabled";
-    }
-
-    if(excecao == 'paraguai'){
-        document.getElementById('slct_ar').options[5].disabled = "disabled";
-        document.getElementById('slct_bo').options[5].disabled = "disabled";
-        document.getElementById('slct_ch').options[5].disabled = "disabled";
-        document.getElementById('slct_ur').options[5].disabled = "disabled";
-    }
-
-    if(excecao == 'uruguai'){
-        document.getElementById('slct_ar').options[5].disabled = "disabled";
-        document.getElementById('slct_bo').options[5].disabled = "disabled";
-        document.getElementById('slct_ch').options[5].disabled = "disabled";
-        document.getElementById('slct_pa').options[5].disabled = "disabled";
-    }
+    excecao == 'argentina' ? document.getElementById('slct_ar').options[5].disabled = false: null;
+    excecao == 'bolivia' ? document.getElementById('slct_bo').options[5].disabled = false: null;
+    excecao == 'chile' ? document.getElementById('slct_ch').options[5].disabled = false: null;
+    excecao == 'paraguai' ? document.getElementById('slct_pa').options[5].disabled = false: null;
+    excecao == 'uruguai' ? document.getElementById('slct_ur').options[5].disabled = false: null;
 }    
 
 function limparGA(){

@@ -54,3 +54,7 @@ select {
 option{
   font-size:150%;
 }
+
+option:disabled {
+  color: red;
+}

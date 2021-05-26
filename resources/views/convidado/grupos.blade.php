@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'CAC - Home')
+@section('title', 'CAC - Convidado')
 
 @section('topBar')
 
@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="<?php echo asset('css/jogo/format.css')?>" type="text/css">
 <link rel="stylesheet" href="<?php echo asset('css/jogo/select.css')?>" type="text/css">
 <link rel="stylesheet" href="<?php echo asset('css/scrollBar.css')?>" type="text/css">
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="../js/jogo/grupos.js"></script>
+
 <form action="" method="POST">
     @csrf
 <center>
@@ -24,7 +26,7 @@
                     <br>
                     <label for='Argentina'>Argentina</label>
                     <div class='select'>
-                        <select id='slct_ar' name="Argentina" onchange="atualizaGA('argentina', value)">
+                        <select id='slct_ar' name="Argentina" onchange="atualizaGA('argentina', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
                             <option value='1'>1º Lugar (classificado)</option>
                             <option value='2'>2º Lugar (classificado)</option>
@@ -42,13 +44,13 @@
                     <br>
                     <label for='Bolívia'>Bolívia</label>
                     <div class='select'>
-                        <select id='slct_bo' name="Bolivia" onchange='atualizaGA()'>
+                        <select id='slct_bo' name="Bolivia" onchange="atualizaGA('bolivia', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value="1">1º Lugar (classificado)</option>
+                            <option value="2">2º Lugar (classificado)</option>
+                            <option value="3">3º Lugar (classificado)</option>
+                            <option value="4">4º Lugar (classificado)</option>
+                            <option value="5">5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -60,13 +62,13 @@
                     <br>
                     <label for='Chile'>Chile</label>
                     <div class='select'>
-                        <select id='slct_ch' name="Chile" onchange='atualizaGA()'>
+                        <select id='slct_ch' name="Chile" onchange="atualizaGA('chile', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value="1">1º Lugar (classificado)</option>
+                            <option value="2">2º Lugar (classificado)</option>
+                            <option value="3">3º Lugar (classificado)</option>
+                            <option value="4">4º Lugar (classificado)</option>
+                            <option value="5">5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -78,13 +80,13 @@
                     <br>
                     <label for='Paraguai'>Paraguai</label>
                     <div class='select'>
-                        <select id='slct_pa' name="Paraguai" onchange='atualizaGA()'>
+                        <select id='slct_pa' name="Paraguai" onchange="atualizaGA('paraguai', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value="1">1º Lugar (classificado)</option>
+                            <option value="2">2º Lugar (classificado)</option>
+                            <option value="3">3º Lugar (classificado)</option>
+                            <option value="4">4º Lugar (classificado)</option>
+                            <option value="5">5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -96,15 +98,20 @@
                     <br>
                     <label for='Uruguai'>Uruguai</label>
                     <div class='select'>
-                        <select id='slct_pa' name="Uruguai" onchange="atualizaGA('uruguai')">
+                        <select id='slct_ur' name="Uruguai" onchange="atualizaGA('uruguai', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value="1">1º Lugar (classificado)</option>
+                            <option value="2">2º Lugar (classificado)</option>
+                            <option value="3">3º Lugar (classificado)</option>
+                            <option value="4">4º Lugar (classificado)</option>
+                            <option value="5">5º Lugar (eliminado)</option>
                         </select>
                     </div>
+                </td>
+            </tr>
+            <tr>
+                <td id='last'>
+                    <input class='botao' id='limparA' onclick='limparGA()' value='Limpar Grupo A'></input>
                 </td>
             </tr>
         </table>
@@ -205,6 +212,11 @@
                             <option>5º Lugar (eliminado)</option>
                         </select>
                     </div>
+                </td>
+            </tr>
+            <tr>
+                <td id='last'>
+                    <input class='botao' id='limparB'  onclick='limparGB()' value='Limpar Grupo B'></input>
                 </td>
             </tr>
         </table>

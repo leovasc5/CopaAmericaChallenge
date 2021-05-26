@@ -1,5 +1,6 @@
 .container{
     border-radius: 16px;
+    height: 800px;
     width: 300px;
     border: 1px solid #e6b0b0;
     margin: 16px;
@@ -49,4 +50,45 @@ td{
 
 #first{
     border-top: none;
+}
+
+#last{
+    border-top: 1px solid #FF0000;
+}
+
+
+button{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.botao {
+    margin: 0;
+    width: 150px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#limparA{
+    background-color: #ff0000;
+    margin-top: 20px;
+}
+
+#limparB{
+    background-color: #ff0000;
+}
+
+#limparA:hover{
+    background-color: #ff4000;
+}
+
+#limparB:hover{
+    background-color: #ff4000;
 }

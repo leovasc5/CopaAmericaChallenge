@@ -18,12 +18,13 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 120px;
+  width: 200px;
   height: 30px;
   line-height: 3;
   background-color: #0066cc;
   overflow: hidden;
   border-radius: .25em;
+  margin: 0 auto;
 }
 select {
   flex: 1;
@@ -51,8 +52,5 @@ select {
 }
 
 option{
-    font-size:200%;
-    padding: 100px 5px;
-    margin-top: 36px;
-    cursor: pointer;
+  font-size:150%;
 }

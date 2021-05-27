@@ -11,8 +11,6 @@
 <script src="../js/jogo/alert.js"></script>
 <script src="../js/jogo/grupos.js"></script>
 
-<form action="" method="POST">
-    @csrf
 <center>
 <div class='container'>
     <div class='sub1'>
@@ -112,7 +110,7 @@
             </tr>
             <tr>
                 <td id='last'>
-                    <input class='botao' id='limparA' onclick='limparGA()' value='Limpar Grupo A'></input>
+                    <input type='button' class='botao' id='limparA' onclick='limparGA()'value='Limpar Grupo A'></input>
                 </td>
             </tr>
         </table>
@@ -217,14 +215,31 @@
             </tr>
             <tr>
                 <td id='last'>
-                    <input class='botao' id='limparB'  onclick='limparGB()' value='Limpar Grupo B'></input>
+                    <input type='button' class='botao' id='limparB'  onclick='limparGB()' value='Limpar Grupo B'></input>
                 </td>
             </tr>
         </table>
     </div>
 </div>
-</form>
+
 </center>
+<form action = "/valida_grupos" method="POST">
+    @csrf
+    <input type='hidden' name='1A' id='1A'/>
+    <input type='hidden' name='2A' id='2A'/>
+    <input type='hidden' name='3A' id='3A'/>
+    <input type='hidden' name='4A' id='4A'/>
+    <input type='hidden' name='5A' id='5A'/>
+
+    <input type='hidden' name='1B' id='1B'/>
+    <input type='hidden' name='2B' id='2B'/>
+    <input type='hidden' name='3B' id='3B'/>
+    <input type='hidden' name='4B' id='4B'/>
+    <input type='hidden' name='5B' id='5B'/>
+    <center>
+        <input type='submit' class='botao' id='verifica' value='IR PARA O MATA-MATA' onclick="execute()" disabled></input>
+    </center>
+</form>
 <br><br>
 
 @endsection

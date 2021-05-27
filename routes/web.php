@@ -29,3 +29,5 @@ Route::get('convidado/grupos', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::post('/convidado/quartas', [CACController::class, 'valida_grupos_convidado']);

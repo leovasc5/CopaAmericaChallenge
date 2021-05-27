@@ -85,7 +85,7 @@ function atualizaGA(excecao, posicao){
         posicao == 5 ? ga_quinto = 'paraguai' : null;
         pa_selected = true;
         verifica();
-    }else if(excecao == 'chile' && pa_selected == true){
+    }else if(excecao == 'paraguai' && pa_selected == true){
         swal('Limpe o Grupo A', 'Você deve limpar o Grupo A para poder trocar a posição do Paraguai', 'error');
     }
 

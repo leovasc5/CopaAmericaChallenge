@@ -12,6 +12,8 @@
 <script src="../js/jogo/grupos.js"></script>
 
 <center>
+    <br>
+    <h2>FASE DE GRUPOS</h2>
 <div class='container'>
     <div class='sub1'>
         GRUPO A
@@ -223,19 +225,19 @@
 </div>
 
 </center>
-<form action = "/valida_grupos" method="POST">
+<form action="../convidado/quartas" method="POST">
     @csrf
-    <input type='hidden' name='1A' id='1A'/>
-    <input type='hidden' name='2A' id='2A'/>
-    <input type='hidden' name='3A' id='3A'/>
-    <input type='hidden' name='4A' id='4A'/>
-    <input type='hidden' name='5A' id='5A'/>
+    <input type='hidden' name='A1' id='1A'/>
+    <input type='hidden' name='A2' id='2A'/>
+    <input type='hidden' name='A3' id='3A'/>
+    <input type='hidden' name='A4' id='4A'/>
+    <input type='hidden' name='A5' id='5A'/>
 
-    <input type='hidden' name='1B' id='1B'/>
-    <input type='hidden' name='2B' id='2B'/>
-    <input type='hidden' name='3B' id='3B'/>
-    <input type='hidden' name='4B' id='4B'/>
-    <input type='hidden' name='5B' id='5B'/>
+    <input type='hidden' name='B1' id='1B'/>
+    <input type='hidden' name='B2' id='2B'/>
+    <input type='hidden' name='B3' id='3B'/>
+    <input type='hidden' name='B4' id='4B'/>
+    <input type='hidden' name='B5' id='5B'/>
     <center>
         <input type='submit' class='botao' id='verifica' value='IR PARA O MATA-MATA' onclick="execute()" disabled></input>
     </center>

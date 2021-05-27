@@ -20,4 +20,31 @@ class CACController extends Controller
             'b5' => $request->B5
         ]);
     }
+
+    public function valida_quartas_convidado(Request $request){
+        return view('convidado.semi', [
+            'semi1' => $request->semi1,
+            'semi2' => $request->semi2,
+            'semi3' => $request->semi3,
+            'semi4' => $request->semi4
+        ]);
+    }
+
+    public function valida_semi_convidado(Request $request){
+        return view('convidado.terceiro', [
+            'final1' => $request->final1,
+            'final2' => $request->final2,
+            'terceiro1' => $request->terceiro1,
+            'terceiro2' => $request->terceiro2
+        ]);
+    }
+
+    public function valida_terceiro_convidado(Request $request){
+        return view('convidado.final', [
+            'final1' => $request->final1,
+            'final2' => $request->final2,
+            'terceiro' => $request->terceiro
+        ]);
+    }
+    
 }

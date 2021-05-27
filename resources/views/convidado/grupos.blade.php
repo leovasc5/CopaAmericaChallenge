@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="<?php echo asset('css/jogo/format.css')?>" type="text/css">
 <link rel="stylesheet" href="<?php echo asset('css/jogo/select.css')?>" type="text/css">
 <link rel="stylesheet" href="<?php echo asset('css/scrollBar.css')?>" type="text/css">
-<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="<?php echo asset('css/jogo/alert.css')?>" type="text/css">
+<script src="../js/jogo/alert.js"></script>
 <script src="../js/jogo/grupos.js"></script>
 
 <form action="" method="POST">
@@ -131,13 +132,13 @@
                     <br>
                     <label for='Brasil'>Brasil</label>
                     <div class='select'>
-                        <select id='slct_br'>
+                        <select id='slct_br' name="Brasil" onchange="atualizaGB('brasil', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value='1'>1º Lugar (classificado)</option>
+                            <option value='2'>2º Lugar (classificado)</option>
+                            <option value='3'>3º Lugar (classificado)</option>
+                            <option value='4'>4º Lugar (classificado)</option>
+                            <option value='5'>5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -149,13 +150,13 @@
                     <br>
                     <label for='Colômbia'>Colômbia</label>
                     <div class='select'>
-                        <select id='slct_co'>
+                        <select id='slct_co' name="Colombia" onchange="atualizaGB('colombia', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value='1'>1º Lugar (classificado)</option>
+                            <option value='2'>2º Lugar (classificado)</option>
+                            <option value='3'>3º Lugar (classificado)</option>
+                            <option value='4'>4º Lugar (classificado)</option>
+                            <option value='5'>5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -167,13 +168,13 @@
                     <br>
                     <label for='Equador'>Equador</label>
                     <div class='select'>
-                        <select id='slct_eq'>
+                        <select id='slct_eq' name="Equador" onchange="atualizaGB('equador', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value='1'>1º Lugar (classificado)</option>
+                            <option value='2'>2º Lugar (classificado)</option>
+                            <option value='3'>3º Lugar (classificado)</option>
+                            <option value='4'>4º Lugar (classificado)</option>
+                            <option value='5'>5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -185,13 +186,13 @@
                     <br>
                     <label for='Peru'>Peru</label>
                     <div class='select'>
-                        <select id='slct_pe'>
+                        <select id='slct_pe' name="Peru" onchange="atualizaGB('peru', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value='1'>1º Lugar (classificado)</option>
+                            <option value='2'>2º Lugar (classificado)</option>
+                            <option value='3'>3º Lugar (classificado)</option>
+                            <option value='4'>4º Lugar (classificado)</option>
+                            <option value='5'>5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>
@@ -203,13 +204,13 @@
                     <br>
                     <label for='Venezuela'>Venezuela</label>
                     <div class='select'>
-                        <select id='slct_ve'>
+                        <select id='slct_ve' name="Venezuela" onchange="atualizaGB('venezuela', this.value)">
                             <option disabled selected style="color:#0066cc">Posição</option>
-                            <option>1º Lugar (classificado)</option>
-                            <option>2º Lugar (classificado)</option>
-                            <option>3º Lugar (classificado)</option>
-                            <option>4º Lugar (classificado)</option>
-                            <option>5º Lugar (eliminado)</option>
+                            <option value='1'>1º Lugar (classificado)</option>
+                            <option value='2'>2º Lugar (classificado)</option>
+                            <option value='3'>3º Lugar (classificado)</option>
+                            <option value='4'>4º Lugar (classificado)</option>
+                            <option value='5'>5º Lugar (eliminado)</option>
                         </select>
                     </div>
                 </td>

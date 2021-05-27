@@ -17,7 +17,7 @@
 
     @yield('topBar')
     <div class="topnav">
-      <a id="logo"><img src="/img/copa_america_logo.png" style="max-width:54px;"/></a>
+      <a id="logo"><img src="/img/copa_america_ico.png" style="max-width:54px; margin-top:5px;"/></a>
       @auth
       <a class="active">Home</a>
       <a href="#news">Jogar</a>

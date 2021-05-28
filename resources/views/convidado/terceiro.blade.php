@@ -47,7 +47,7 @@
         <input type='hidden' name='final2' id='final2' value="{{$final2}}"/>
         <input type='hidden' name='terceiro' id='terceiro'/>
         
-        <input type='submit' class='botao' id='verifica' value='IR PARA AS DECISÕES' onclick="execute()" disabled></input>
+        <input type='submit' class='botao' id='verifica' value='IR PARA A FINAL' onclick="execute()" disabled></input>
     </form>
     </center>
 <br><br>

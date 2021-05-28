@@ -46,5 +46,14 @@ class CACController extends Controller
             'terceiro' => $request->terceiro
         ]);
     }
+
+    public function valida_premiacao_convidado(Request $request){
+        return view('convidado.premiacao', [
+            'campeao' => $request->campeao,
+            'vice' => $request->vice,
+            'terceiro' => $request->terceiro
+        ]);
+    }
+    
     
 }

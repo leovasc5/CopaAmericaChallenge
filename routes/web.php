@@ -35,3 +35,5 @@ Route::post('/convidado/semi', [CACController::class, 'valida_quartas_convidado'
 Route::post('/convidado/terceiro', [CACController::class, 'valida_semi_convidado']);
 Route::post('/convidado/final', [CACController::class, 'valida_terceiro_convidado']);
 Route::post('/convidado/premiacao', [CACController::class, 'valida_premiacao_convidado']);
+
+Route::post('/jogo/quartas', [CACController:class, 'valida_grupos_jogo']);

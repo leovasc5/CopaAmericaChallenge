@@ -48,4 +48,6 @@ Route::post('/jogo/terceiro', [CACController::class, 'valida_semi_jogo'])->middl
 Route::post('/jogo/final', [CACController::class, 'valida_terceiro_jogo'])->middleware('auth');
 Route::post('/jogo/premiacao', [CACController::class, 'valida_premiacao_jogo'])->middleware('auth');
 
+Route::delete('/excluir', [CACController::class, 'destroy'])->middleware('auth');
+
 Route::get('/dashboard', [CACController::class, 'dashboard'])->middleware('auth');

@@ -1,6 +1,6 @@
 .container{
     border-radius: 24px;
-    height: 150px;
+    height: 205px;
     width: 512px;
     border: 1px solid #e6b0b0;
     margin: 18px;
@@ -11,3 +11,45 @@
     text-align: center;
     vertical-align: middle;
 }
+
+
+input [type='submit']{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: hsl(210, 29%, 29%);
+    cursor: pointer;
+}
+
+button{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.botao {
+    margin: 0;
+    width: 150px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#sim{
+    background-color: #ff0000;
+}
+#sim:hover{
+    background-color: #ff5000;
+}
+
+#nao{
+    background-color: #4caf4c;
+}
+#nao:hover{
+    background-color: #5cd161;
+}
+

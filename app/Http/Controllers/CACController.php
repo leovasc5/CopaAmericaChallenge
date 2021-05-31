@@ -59,7 +59,7 @@ class CACController extends Controller
     }
 
     public function dashboard(){
-        $chav = Chaveamento::all();
+        $chav = Chaveamento::orderBy('created_at', 'desc')->get();
 
         return view('dashboard', [
             'chav' => $chav,
@@ -68,10 +68,8 @@ class CACController extends Controller
 
     public function valida_entrada_grupos(){
         $user_id = auth()->user()->id;
-        $booleano = Chaveamento::where('id_usuario', $user_id)->first();
-        $id_usuario = $booleano->id_usuario;
-
-        if($user_id == $id_usuario){
+        $dados = Chaveamento::where('id_usuario', $user_id)->first();
+        if(isset($dados)){
             return view('jogo.replay');
         }else{
             return view('jogo.grupos');
@@ -135,4 +133,11 @@ class CACController extends Controller
             'terceiro' => $request->terceiro
         ]);
     }
+
+    public function destroy(){
+        $id = auth()->user()->id;
+        Chaveamento::where('id_usuario', $id)->delete();
+        return redirect('/jogo/grupos');
+    }
+
 }

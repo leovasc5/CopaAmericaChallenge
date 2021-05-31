@@ -14,7 +14,6 @@
 <center>
     <br>
     <h2>FASE DE GRUPOS</h2>
-    <h3>{{$bo}}</h3>
 <div class='container'>
     <div class='sub1'>
         GRUPO A

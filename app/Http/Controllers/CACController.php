@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Chaveamento;
 use App\Models\User;
+// use App\Http\Controllers\Auth;
 
 class CACController extends Controller
 {
@@ -65,7 +66,7 @@ class CACController extends Controller
         ]);
     }
     
-    public function valida_grupos_jogo(){
+    public function valida_grupos_jogo(Request $request){
         return view('jogo.quartas', [
             'a1' => $request->A1,
             'a2' => $request->A2,
@@ -106,8 +107,15 @@ class CACController extends Controller
         ]);
     }
 
-    public function valida_premiacao_convidado(Request $request){
-        return view('convidado.premiacao', [
+    public function valida_premiacao_jogo(Request $request){       
+        $armazena = new Chaveamento;
+        $armazena->campeao = $request->campeao;
+        $armazena->vice = $request->vice;
+        $armazena->terceiro = $request->terceiro;
+        $armazena->criador = auth()->user()->name;
+        $armazena->save();
+        
+        return view('jogo.premiacao', [
             'campeao' => $request->campeao,
             'vice' => $request->vice,
             'terceiro' => $request->terceiro

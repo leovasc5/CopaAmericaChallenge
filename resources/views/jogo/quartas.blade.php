@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'CAC - Convidado')
+@section('title', 'CAC - Jogo')
 
 @section('topBar')
 
@@ -127,7 +127,7 @@
           </label>
     </div>
 
-    <form action="../convidado/semi" method="POST">
+    <form action="../jogo/semi" method="POST">
         @csrf
         <input type='hidden' name='semi1' id='semi1'/>
         <input type='hidden' name='semi2' id='semi2'/>

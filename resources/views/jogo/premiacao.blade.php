@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'CAC - Convidado')
+@section('title', 'CAC - Jogo')
 
 @section('topBar')
 

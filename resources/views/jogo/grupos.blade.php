@@ -225,7 +225,7 @@
 </div>
 
 </center>
-<form action="../convidado/quartas" method="POST">
+<form action="../jogo/quartas" method="POST">
     @csrf
     <input type='hidden' name='A1' id='1A'/>
     <input type='hidden' name='A2' id='2A'/>

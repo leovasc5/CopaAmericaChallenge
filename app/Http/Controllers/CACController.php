@@ -65,6 +65,19 @@ class CACController extends Controller
             'chav' => $chav,
         ]);
     }
+
+    public function valida_entrada_grupos(){
+        $user_id = auth()->user()->id;
+        $booleano = Chaveamento::where('id_usuario', $user_id)->first();
+        $id_usuario = $booleano->id_usuario;
+
+        if($user_id == $id_usuario){
+            return view('jogo.replay');
+        }else{
+            return view('jogo.grupos');
+        }
+    }
+
     
     public function valida_grupos_jogo(Request $request){
         return view('jogo.quartas', [
@@ -113,6 +126,7 @@ class CACController extends Controller
         $armazena->vice = $request->vice;
         $armazena->terceiro = $request->terceiro;
         $armazena->criador = auth()->user()->name;
+        $armazena->id_usuario = auth()->user()->id;
         $armazena->save();
         
         return view('jogo.premiacao', [

@@ -12,7 +12,7 @@
     <center>
     <br><br>
 
-    <h2 style="text-transform: capitalize;">Campeão: {{$cha->campeao}}</h2>
+    <h2 style="text-transform: capitalize;">{{$cha->campeao}}</h2> <label>Campeão</label>
  
     <div class="podium">
         <table id="ladder">
@@ -39,11 +39,38 @@
                 <img src='../img/times/uruguai.jpg' width="150px">
             @endif
 
-            <td style="height: 175px">{{$cha->vice}}<div id="podium1" style="height: 100px">2º</div></td>
+            <td style="height: 175px">
+                @if($cha->vice == 'bolivia')
+                   Bolívia
+                @elseif($cha->vice == 'colombia')
+                   Colômbia
+                @else
+                   {{$cha->vice}}
+                @endif
+                <div id="podium1" style="height: 100px">2º</div>
+            </td>
         
-            <td style="height: 175px">{{$cha->campeao}}<div id="podium0" style="height: 130px">1º</div></td>
+            <td style="height: 175px">
+                @if($cha->campeao == 'bolivia')
+                   Bolívia
+                @elseif($cha->campeao == 'colombia')
+                   Colômbia
+                @else
+                   {{$cha->campeao}}
+                @endif
+                <div id="podium0" style="height: 130px">1º</div>
+            </td>
             
-            <td style="height: 175px">{{$cha->terceiro}}<div id="podium2" style="height: 70px">3º</div></td>
+            <td style="height: 175px">
+                @if($cha->terceiro == 'bolivia')
+                   Bolívia
+                @elseif($cha->terceiro == 'colombia')
+                   Colômbia
+                @else
+                   {{$cha->terceiro}}
+                @endif
+                <div id="podium2"  style="height: 70px">3º</div>
+            </td>
           </tr>
        </table>
        <p>Criador: {{$cha->criador}}

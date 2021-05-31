@@ -18,6 +18,7 @@ class CreateChaveamentosTable extends Migration
             $table->string('vice');
             $table->string('terceiro');
             $table->string('criador');
+            $table->integer('id_usuario');
             $table->id();
             $table->timestamps();
         });

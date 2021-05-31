@@ -38,11 +38,38 @@
                 <img src='../img/times/uruguai.jpg' width="200px">
             @endif
 
-            <td>{{$vice}}<div id="podium1">2º</div></td>
+            <td>
+                @if($vice == 'bolivia')
+                   Bolívia
+                @elseif($vice == 'colombia')
+                   Colômbia
+                @else
+                   {{$vice}}
+                @endif
+                <div id="podium1">2º</div>
+            </td>
         
-            <td>{{$campeao}}<div id="podium0">1º</div></td>
+            <td>
+                @if($campeao == 'bolivia')
+                   Bolívia
+                @elseif($campeao == 'colombia')
+                   Colômbia
+                @else
+                   {{$campeao}}
+                @endif
+                <div id="podium0">1º</div>
+            </td>
             
-            <td>{{$terceiro}}<div id="podium2">3º</div></td>
+            <td>
+                @if($terceiro == 'bolivia')
+                   Bolívia
+                @elseif($terceiro == 'colombia')
+                   Colômbia
+                @else
+                   {{$terceiro}}
+                @endif
+                <div id="podium2">3º</div>
+            </td>
           </tr>
        </table>
       </div>

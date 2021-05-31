@@ -26,9 +26,11 @@ Route::get('convidado/grupos', function () {
     return view('/convidado/grupos');
 });
 
-Route::get('jogo/grupos', function () {
-    return view('/jogo/grupos');
-});
+// Route::get('jogo/grupos', function () {
+//     return view('/jogo/grupos');
+// });
+
+Route::get('/jogo/grupos', [CACController::class, 'valida_entrada_grupos']);
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');

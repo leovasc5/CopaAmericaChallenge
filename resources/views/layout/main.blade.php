@@ -19,8 +19,8 @@
     <div class="topnav">
       <a id="logo"><img src="/img/copa_america_ico.png" style="max-width:54px; margin-top:5px;"/></a>
       @auth
-      <a class="active">Home</a>
-      <a href="#news">Jogar</a>
+      <a href="/dashboard">Home</a>
+      <a href="jogo/grupos">Jogar</a>
       <form action="/logout" method="POST">
         @csrf
         <a href="/logout" onclick="event.preventDefault();

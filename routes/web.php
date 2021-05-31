@@ -26,9 +26,13 @@ Route::get('convidado/grupos', function () {
     return view('/convidado/grupos');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('jogo/grupos', function () {
+    return view('/jogo/grupos');
+});
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
 
 Route::post('/convidado/quartas', [CACController::class, 'valida_grupos_convidado']);
 Route::post('/convidado/semi', [CACController::class, 'valida_quartas_convidado']);
@@ -36,4 +40,10 @@ Route::post('/convidado/terceiro', [CACController::class, 'valida_semi_convidado
 Route::post('/convidado/final', [CACController::class, 'valida_terceiro_convidado']);
 Route::post('/convidado/premiacao', [CACController::class, 'valida_premiacao_convidado']);
 
-Route::post('/jogo/quartas', [CACController:class, 'valida_grupos_jogo']);
+Route::post('/jogo/quartas', [CACController::class, 'valida_grupos_jogo'])->middleware('auth');
+Route::post('/jogo/semi', [CACController::class, 'valida_quartas_jogo'])->middleware('auth');
+Route::post('/jogo/terceiro', [CACController::class, 'valida_semi_jogo'])->middleware('auth');
+Route::post('/jogo/final', [CACController::class, 'valida_terceiro_jogo'])->middleware('auth');
+Route::post('/jogo/premiacao', [CACController::class, 'valida_premiacao_jogo'])->middleware('auth');
+
+Route::get('/dashboard', [CACController::class, 'dashboard'])->middleware('auth');

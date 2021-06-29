@@ -1,4 +1,4 @@
-<h1 align="center">Cretch</h1>
+<h1 align="center">Copa America Challenge</h1>
 <img src="https://ak.picdn.net/shutterstock/videos/1022906356/thumb/1.jpg?ip=x480" height="20" width="30" style="max-width:100%;" title="English">
 <p text-alingn="justify">Project developed in PHP Laravel for the user to assemble their forecast for the Copa America 2020 (soccer) switching and share it with other platform users.</p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Portugal_flag_300.png" height="20" width="30" style="max-width:100%;" title="Português">
